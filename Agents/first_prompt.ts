@@ -1,0 +1,1 @@
+// Agent prompt to refine the first prompt for a task. This agent will take the initial prompt and refine it to make it more clear and specific.
