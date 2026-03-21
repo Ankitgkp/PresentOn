@@ -5,7 +5,7 @@ import heroImg from './assets/hero.png'
 import './App.css'
 
 function App() {
-  const [countt, setCount] = useState(0)
+  const [countt, setCountt] = useState(0)
 
   return (
     <>
