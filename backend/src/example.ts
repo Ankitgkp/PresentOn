@@ -10,15 +10,16 @@ const openrouter = new OpenRouter({
 async function main() {
     const stream = await openrouter.chat.send({
         chatGenerationParams: {
-            model: "stepfun/step-3.5-flash:free",
+            model: "arcee-ai/trinity-large-preview:free",
             messages: [
                 {
                     role: "user",
-                    content: "Create a 4 page presentation about the history of the internet, including key milestones and figures."
-                }, {
+                    content: "Create a 5 slides presentation about Hitler"
+                },
+                {
                     role: "system",
                     content: SYSTEM_PROMPT
-                }
+                },
             ],
             stream: true
         }
