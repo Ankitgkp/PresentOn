@@ -15,13 +15,13 @@ Provide a clear and concise description of the task the agent needs to perform.
 ## Objective
 What is the goal of this agent task?
 
-- Transform / generate / analyze / validate (choose one or more)
+- Transform / generate / analyse / validate (choose one or more)
 - Expected outcome of the agent
 
 ---
 
 ## Task Details
-Describe the exact behavior expected from the agent:
+Describe the exact behaviour expected from the agent:
 
 - Input format:
 - Output format:

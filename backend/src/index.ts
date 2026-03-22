@@ -1,11 +1,13 @@
 import { OpenRouter } from "@openrouter/sdk";
-import { SYSTEM_PROMPT } from "./agents/humanize";
+import { ANTI_PLAGIARISM_LAYER } from "./agents/anti_plagiarism_agent";
 import dotenv from "dotenv";
 dotenv.config();
 
+// Passed the OpenRouter API to use the Step-3.5-Flash model
 const openrouter = new OpenRouter({
     apiKey: process.env.LLM_API_KEY
 });
+
 
 async function main() {
     const stream = await openrouter.chat.send({
@@ -14,12 +16,11 @@ async function main() {
             messages: [
                 {
                     role: "user",
-                    content: "Create a 5 slides presentation about Hitler"
-                },
-                {
+                    content: "Create a 4 page presentation about hitler"
+                }, {
                     role: "system",
-                    content: SYSTEM_PROMPT
-                },
+                    content: ANTI_PLAGIARISM_LAYER
+                }
             ],
             stream: true
         }
